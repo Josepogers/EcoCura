@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     borderTopStartRadius: 100,
     alignItems: "center",
     justifyContent: "center",
-
+    gap: 10,
     bottom: 0,
     position: "absolute",
   },

@@ -2,12 +2,25 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { GetStart } from "./src/pages/GetStart";
 import { Home } from "./src/pages/Home";
+import { PragaDetalhes } from "./src/pages/PragasDetalhes";
+import { LoginScreen } from "./src/pages/Login";
+import { CriarConta } from "./src/pages/CriarConta";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen
+          name="Login"
+          component={LoginScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="CriarConta"
+          component={CriarConta}
+          options={{ headerShown: false }}
+        />
         <Stack.Screen
           name="GetStart"
           component={GetStart}
@@ -18,6 +31,7 @@ export default function App() {
           component={Home}
           options={{ headerShown: false }}
         />
+        <Stack.Screen name="PragaDetalhes" component={PragaDetalhes} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,5 +1,4 @@
 import { StyleSheet } from "react-native";
-import { SearchBar } from "react-native-screens";
 
 const styles = StyleSheet.create({
   container: {
@@ -9,7 +8,13 @@ const styles = StyleSheet.create({
     backgroundColor: "#8FBC8F",
     alignItems: "center",
   },
-
+  pragasList: {
+    flexDirection: "column",
+    justifyContent: "space-between",
+    width: "90%",
+    rowGap: 50,
+    marginBottom: 20,
+  },
 });
 
 export { styles };

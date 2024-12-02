@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { View, Text, TouchableOpacity, Image } from "react-native";
+import { View, Text, TouchableOpacity, Image, Button } from "react-native";
 
 import { useNavigation } from "@react-navigation/native";
 
 import { styles } from "../styles/GetStart";
+import { ButtonBack } from "../components/ButtonBack";
 
 const backgroundImage = require("../../assets/background.webp");
 
@@ -24,6 +25,7 @@ const GetStart = ({ navigation }: any) => {
         >
           <Text style={{ color: "#fff", fontSize: 30 }}>GetStart</Text>
         </TouchableOpacity>
+        <ButtonBack navigation={navigation} />
       </View>
     </View>
   );

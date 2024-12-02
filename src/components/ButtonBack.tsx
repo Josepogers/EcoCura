@@ -7,10 +7,17 @@ export function ButtonBack({ navigation }: any) {
   return (
     <View>
       <TouchableOpacity
-        onPress={() => navigation.navigate("GetStart")}
+        onPress={() => navigation.goBack()}
         style={styles.buttonVoltar}
-      >
-        <Text style={{ color: "#fff", fontSize: 30 }}>Voltar</Text>
+      > 
+        <Text
+          style={{
+            color: "#fff",
+            fontSize: 30,
+          }}
+        >
+          Voltar
+        </Text>
       </TouchableOpacity>
     </View>
   );
