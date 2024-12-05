@@ -17,12 +17,13 @@ const LoginScreen = ({ navigation }: any) => {
     if (nameUser === "") {
       Alert.alert("Erro", "O nome de usuário não pode estar vazio!");
     } else if (password === "") {
-      Alert.alert("Erro", "senha não pode estar vazia!");
+      Alert.alert("Erro", "A senha não pode estar vazia!");
     } else {
       Alert.alert("Sucesso", `Bem-vindo, ${nameUser}!`);
       navigation.navigate("GetStart");
     }
   };
+
   const handleConvidado = () => {
     navigation.navigate("GetStart");
   };
@@ -33,7 +34,8 @@ const LoginScreen = ({ navigation }: any) => {
       style={styles.background}
     >
       <View style={styles.overlay}>
-        <Text style={styles.title}>Bem-vindo!</Text>
+        <Text style={styles.appTitle}>Qual a Praga?</Text>
+        <Text style={styles.subtitle}>Bem-vindo!</Text>
 
         <TextInput
           style={styles.input}
@@ -56,14 +58,16 @@ const LoginScreen = ({ navigation }: any) => {
         <TouchableOpacity style={styles.button} onPress={handleLogin}>
           <Text style={styles.buttonText}>Entrar</Text>
         </TouchableOpacity>
+
         <TouchableOpacity
-          style={styles.button}
+          style={[styles.button, styles.secondaryButton]}
           onPress={() => navigation.navigate("CriarConta")}
         >
           <Text style={styles.buttonText}>Criar conta</Text>
         </TouchableOpacity>
+
         <TouchableOpacity onPress={handleConvidado}>
-          <Text style={styles.buttonText}>Continuar sem login</Text>
+          <Text style={styles.guestText}>Continuar sem login</Text>
         </TouchableOpacity>
       </View>
     </ImageBackground>
@@ -77,15 +81,23 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   overlay: {
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    backgroundColor: "rgba(0, 0, 0, 0.7)",
     padding: 20,
     borderRadius: 10,
     alignItems: "center",
     width: "85%",
   },
-  title: {
-    fontSize: 32,
+  appTitle: {
+    fontSize: 36,
     fontWeight: "bold",
+    color: "#88b04b",
+    marginBottom: 10,
+    textShadowColor: "#000",
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 5,
+  },
+  subtitle: {
+    fontSize: 28,
     color: "#fff",
     marginBottom: 20,
   },
@@ -107,10 +119,18 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     marginTop: 10,
   },
+  secondaryButton: {
+    backgroundColor: "#6B8E23",
+  },
   buttonText: {
     color: "#fff",
     fontSize: 18,
     fontWeight: "bold",
+  },
+  guestText: {
+    color: "#88b04b",
+    fontSize: 16,
+    marginTop: 15,
   },
 });
 

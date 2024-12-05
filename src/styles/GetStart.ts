@@ -1,35 +1,44 @@
 import { StyleSheet } from "react-native";
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   container: {
-    flexDirection: "column",
-    justifyContent: "space-between",
-    width: "100%",
-    height: "100%",
+    flex: 1,
   },
   main: {
-    height: "100%",
+    flex: 3,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  overlay: {
+    position: "absolute",
+    top: "40%",
+    width: "100%",
+    alignItems: "center",
+  },
+  title: {
+    fontSize: 36,
+    fontWeight: "bold",
+    color: "#fff",
+    textShadowColor: "#000",
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 5,
   },
   footer: {
-    width: 400,
-    height: 200,
-    marginLeft: "1.5%",
-    borderTopEndRadius: 100,
-    borderTopStartRadius: 100,
-    alignItems: "center",
+    flex: 1,
     justifyContent: "center",
-    gap: 10,
-    bottom: 0,
-    position: "absolute",
+    alignItems: "center",
+    backgroundColor: "transparent", // Garante fundo transparente
   },
   buttonGetStart: {
-    justifyContent: "center",
-    alignItems: "center",
-    width: 250,
-    height: 100,
-    backgroundColor: "#00FF00",
-    borderRadius: 50,
+    backgroundColor: "#4CAF50",
+    paddingVertical: 15,
+    paddingHorizontal: 50,
+    borderRadius: 30,
+    marginBottom: 20,
+  },
+  buttonText: {
+    color: "#fff",
+    fontSize: 24,
+    fontWeight: "bold",
   },
 });
-
-export { styles };

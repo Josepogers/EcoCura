@@ -5,6 +5,8 @@ import { Home } from "./src/pages/Home";
 import { PragaDetalhes } from "./src/pages/PragasDetalhes";
 import { LoginScreen } from "./src/pages/Login";
 import { CriarConta } from "./src/pages/CriarConta";
+import TutorialScreen from "./src/pages/Tutorial";
+import { Favoritos } from "./src/pages/Favoritas";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -14,6 +16,12 @@ export default function App() {
         <Stack.Screen
           name="Login"
           component={LoginScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen name="Favoritos" component={Favoritos} />
+        <Stack.Screen
+          name="Tutorial"
+          component={TutorialScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen
