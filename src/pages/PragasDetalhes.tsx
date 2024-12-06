@@ -11,6 +11,8 @@ export function PragaDetalhes({ route }: any) {
       <Text style={styles.description}>{praga.description}</Text>
       <Text style={styles.combatTitle}>Formas de Combate:</Text>
       <Text style={styles.combat}>{praga.combat}</Text>
+      <Text style={styles.combatTitle}>Culturas afetadas:</Text>
+      <Text style={styles.combat}>{praga.crop}</Text>
     </View>
   );
 }

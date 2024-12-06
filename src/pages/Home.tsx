@@ -21,6 +21,7 @@ export function Home({ navigation }: any) {
         "As lagartas recém eclodidas raspam as folhas e se alojam no cartucho, onde se observa seus excrementos. Elas destroem rapidamente as folhas e, ao atingir o cartucho, podem comprometer o desenvolvimento completo da planta, especialmente em condições de seca.",
       combat:
         "Controle biológico com parasitoides como Trichogramma spp., que parasitam os ovos da lagarta, e aplicação de Bacillus thuringiensis (Bt) para matar larvas jovens. Usar inseticidas seletivos como clorantraniliprole apenas quando necessário. Praticar manejo integrado de pragas (MIP) com rotação de culturas e eliminação de restos culturais. Monitorar com armadilhas luminosas para identificar o início da infestação.",
+      crop: "Milho, Soja, Algodão,Feijão, Sorgo, Arroz, Tomate",
       image: require("../../assets/lagarta-cartucho.jpeg"),
     },
     {
@@ -30,6 +31,7 @@ export function Home({ navigation }: any) {
         "Insetos pequenos, de coloração verde, preta ou amarela, que se alimentam da seiva das plantas. Causam folhas enrugadas, deformadas e enfraquecidas, além de serem vetores de várias doenças virais.",
       combat:
         "Introduzir inimigos naturais como joaninhas e crisopídeos, que se alimentam dos pulgões. Pulverizar óleo de neem ou sabão inseticida para sufocar os insetos. Eliminar ervas daninhas e hospedeiras ao redor da área afetada. Usar controle biológico com larvas de Chrysoperla carnea.",
+      crop: "Soja, feijão, alface, entre outras", // Cultura que a praga ataca
       image: require("../../assets/PULGAO.jpg.webp"),
     },
     {
@@ -39,6 +41,7 @@ export function Home({ navigation }: any) {
         "Pequeno inseto alado que se alimenta da seiva das folhas, causando amarelamento, enfraquecimento e queda das folhas. Além de prejudicar a planta diretamente, a mosca branca é vetor de viroses que afetam diversas culturas.",
       combat:
         "Pulverizar óleo mineral para interromper a reprodução e sufocar os ovos. Introduzir predadores como Encarsia formosa, que parasitam as pupas da mosca branca. Instalar armadilhas adesivas amarelas para capturar adultos. Realizar rotação de culturas para evitar proliferação.",
+      crop: "Tomate, pepino, algodão",
       image: require("../../assets/moscabranca.jpg"),
     },
     {
@@ -48,6 +51,7 @@ export function Home({ navigation }: any) {
         "Pequeno besouro que perfura os grãos de café, reduzindo a qualidade e o rendimento da produção. A infestação pode comprometer severamente a comercialização, especialmente em mercados que exigem alta qualidade.",
       combat:
         "Coleta e destruição de grãos infestados manualmente. Uso de armadilhas com feromônios (etanol e metanol) para capturar os adultos. Aplicação de Beauveria bassiana, fungo que infecta e mata o besouro. Realizar monitoramento constante para agir rapidamente ao identificar os primeiros sinais.",
+      crop: "Café",
       image: require("../../assets/brocadocafe.jpg"),
     },
     {
@@ -57,6 +61,7 @@ export function Home({ navigation }: any) {
         "Inseto sugador que se alimenta da seiva de folhas, caules e frutos. Causa manchas escuras, deformações e quedas prematuras, comprometendo a qualidade e o desenvolvimento da cultura.",
       combat:
         "Uso de armadilhas com feromônios para atrair percevejos. Aplicação de inseticidas biológicos ou químicos seletivos, como lambda-cialotrina, apenas quando necessário. Eliminação de restos culturais e ervas daninhas para reduzir o habitat do percevejo. Monitoramento contínuo com amostragens semanais.",
+      crop: "Feijão, soja, milho, tomate",
       image: require("../../assets/percevejo.jpeg"),
     },
     {
@@ -66,6 +71,7 @@ export function Home({ navigation }: any) {
         "Inseto que deposita ovos dentro das frutas, onde as larvas se desenvolvem, causando apodrecimento e queda prematura dos frutos.",
       combat:
         "Uso de armadilhas com feromônios para captura dos adultos. Coleta e destruição de frutos infectados para evitar o desenvolvimento de novas gerações. Aplicação de iscas tóxicas específicas ao redor das plantas afetadas. Manter o solo limpo e livre de restos de frutos caídos.",
+      crop: "Manga, laranja, maçã, abacaxi", // Cultura que a praga ataca
       image: require("../../assets/moscadasfrutas.webp"),
     },
     {
@@ -75,6 +81,7 @@ export function Home({ navigation }: any) {
         "Pequenos aracnídeos que atacam principalmente as folhas, provocando descoloração, manchas prateadas e queda precoce das folhas. Podem se multiplicar rapidamente em condições quentes e secas.",
       combat:
         "Aplicação de acaricidas seletivos para controlar populações. Introdução de ácaros predadores como Phytoseiulus persimilis, que se alimentam de ácaros-praga. Manutenção da umidade elevada para reduzir a taxa de reprodução dos ácaros. Monitoramento contínuo para detecção precoce.",
+      crop: "Tomate, morango, pepino, feijão", // Cultura que a praga ataca
       image: require("../../assets/acaro.webp"),
     },
     {
@@ -84,6 +91,7 @@ export function Home({ navigation }: any) {
         "Insetos que atacam principalmente raízes, caules e sementes. Eles perfuram tecidos vegetais, causando prejuízos graves ao sistema radicular e comprometendo o crescimento.",
       combat:
         "Uso de armadilhas com feromônios para captura dos adultos. Tratamento preventivo das sementes com inseticidas específicos antes do plantio. Realizar aração profunda do solo para expor larvas e adultos aos predadores naturais.",
+      crop: "Feijão, soja, arroz, milho", // Cultura que a praga ataca
       image: require("../../assets/gorgulho.jpeg"),
     },
     {
@@ -93,6 +101,7 @@ export function Home({ navigation }: any) {
         "Inseto que se alimenta das folhas da batata, provocando desfolha severa e redução no rendimento da cultura, especialmente durante a fase de crescimento.",
       combat:
         "Rotação de culturas com espécies não hospedeiras para interromper o ciclo. Aplicação de inseticidas botânicos como piretrina. Controle biológico com predadores naturais, como joaninhas e crisopídeos.",
+      crop: "Batata",
       image: require("../../assets/besourodabatata.webp"),
     },
     {
@@ -102,6 +111,7 @@ export function Home({ navigation }: any) {
         "Larva de mariposa que ataca as folhas, perfurando-as e formando galerias ou minas, o que reduz a capacidade fotossintética da planta, enfraquecendo-a gradualmente.",
       combat:
         "Uso de controle biológico com parasitoides como *Stenomesius japonicus* e aplicação de inseticidas específicos como abamectina. Promover a adubação equilibrada para fortalecer a planta contra ataques.",
+      crop: "Café, tomate, feijão", // Cultura que a praga ataca
       image: require("../../assets/bichomineiro.webp"),
     },
     {
@@ -111,6 +121,7 @@ export function Home({ navigation }: any) {
         "Insetos sugadores que se fixam nas plantas e secretam substâncias cerosas, formando crostas brancas. Causam enfraquecimento da planta e favorecem o surgimento de fumagina.",
       combat:
         "Pulverizar óleo mineral ou óleo de neem para sufocar as cochonilhas. Introduzir predadores naturais como a joaninha *Cryptolaemus montrouzieri*. Limpar manualmente as partes afetadas com algodão embebido em álcool.",
+      crop: "Citrus, feijão, tomate, café",
       image: require("../../assets/cochonilha.jpg"),
     },
     {
@@ -119,36 +130,49 @@ export function Home({ navigation }: any) {
       description:
         "Formigas que cortam folhas e as levam para seus ninhos, onde cultivam fungos como fonte de alimento. Podem desfolhar rapidamente plantas inteiras.",
       combat:
-        "Uso de iscas granuladas com formicidas específicos. Destruição dos ninhos com aplicação direta de produtos químicos. Plantio de espécies repelentes como citronela ao redor das culturas.",
+        "Uso de iscas granuladas com formicidas específicos. Destruição dos ninhos com aplicação direta de produtos químicos. Plantio de espécies repelentes como citronela ao redor das culturas",
+      crop: "Soja, milho, feijão, cana-de-açúcar",
       image: require("../../assets/formigacortadeira.webp"),
     },
-    {
-      id: 13,
-      name: "Nematóides",
-      description:
-        "Vermes microscópicos que atacam as raízes, formando galhas ou lesões que dificultam a absorção de nutrientes, causando murcha e crescimento retardado.",
-      combat:
-        "Rotação de culturas com plantas não hospedeiras. Uso de nematicidas biológicos, como *Bacillus firmus*, para reduzir a população. Incorporar matéria orgânica no solo para estimular microrganismos benéficos.",
-      image: require("../../assets/nematodos.webp"),
-    },
+
     {
       id: 14,
-      name: "Taturana",
+      name: "Tetranychus urticae (Ácaro Vermelho)",
       description:
-        "Lagartas de mariposa com cerdas urticantes que causam desfolha severa. Algumas espécies podem provocar irritações dolorosas ao contato com a pele.",
+        "Ácaro que suga a seiva das plantas, causando descoloração nas folhas e enfraquecimento das culturas.",
       combat:
-        "Remoção manual das lagartas usando luvas para evitar contato. Introdução de predadores naturais como pássaros. Pulverização de produtos biológicos à base de *Bacillus thuringiensis* (Bt).",
-      image: require("../../assets/taturana.webp"),
+        "Aplicação de acaricidas específicos, como o miticida abamectina. Controle biológico com ácaros predadores, como *Phytoseiulus persimilis*. Manter a umidade das plantas elevada para reduzir a infestação.",
+      crop: "Café, tomate, pepino",
+      image: require("../../assets/acarovermelho.jpeg"),
+    },
+    {
+      id: 15,
+      name: "Lagarta da espiga de milho",
+      description:
+        "Larvas da mariposa que atacam o milho, danificando as espigas e reduzindo o rendimento da colheita.",
+      combat:
+        "Uso de armadilhas com feromônios para capturar adultos. Aplicação de Bacillus thuringiensis (Bt) nas plantas para controlar as larvas. Implementar práticas de rotação de culturas.",
+      crop: "Milho",
+      image: require("../../assets/lagartadaespigademilho.jpg"),
+    },
+    {
+      id: 16,
+      name: "Nematóides",
+      description:
+        "Vermes microscópicos que atacam as raízes das plantas, prejudicando a absorção de nutrientes e água.",
+      combat:
+        "Uso de nematicidas específicos. Prática de rotação de culturas e plantio de espécies resistentes. Adição de matéria orgânica ao solo para melhorar a saúde das raízes.",
+      crop: "Feijão, soja, tomate, cenoura",
+      image: require("../../assets/nematodos.webp"),
     },
   ];
+
   const handleFavoritar = (praga: any) => {
     if (favoritos.includes(praga.id)) {
-      // Se já estiver favoritado, remove dos favoritos
       const novosFavoritos = favoritos.filter((id) => id !== praga.id);
-      // Atualiza o estado dos favoritos
+
       setFavoritos(novosFavoritos);
     } else {
-      // Se não estiver, adiciona aos favoritos
       setFavoritos([...favoritos, praga.id]);
     }
   };
@@ -157,7 +181,7 @@ export function Home({ navigation }: any) {
     .filter((praga) =>
       praga.name.toLowerCase().includes(searchQuery.toLowerCase())
     )
-    .slice(0, 8);
+    .slice(0, 17);
 
   return (
     <View style={styles.container}>
@@ -195,7 +219,7 @@ export function Home({ navigation }: any) {
               />
             </TouchableOpacity>
             <TouchableOpacity
-              onPress={() => navigation.navigate("PragaDetalhes", { praga })}
+              onPress={() => navigation.navigate("Praga detalhes", { praga })}
               style={styles.detailsButton}
             >
               <Text style={styles.detailsButtonText}>Ver Detalhes</Text>

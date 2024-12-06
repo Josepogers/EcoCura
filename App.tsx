@@ -39,7 +39,7 @@ export default function App() {
           component={Home}
           options={{ headerShown: false }}
         />
-        <Stack.Screen name="PragaDetalhes" component={PragaDetalhes} />
+        <Stack.Screen name="Praga detalhes" component={PragaDetalhes} />
       </Stack.Navigator>
     </NavigationContainer>
   );
