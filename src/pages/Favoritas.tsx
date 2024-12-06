@@ -28,7 +28,7 @@ export function Favoritos({ route, navigation }: any) {
             }
             style={styles.pragaItem}
           >
-            <Image source={pragas.image} style={styles.pragaImage} />
+            <Image source={item.image} style={styles.pragaImage} />
             <Text style={styles.pragaName}>{item.name}</Text>
           </TouchableOpacity>
         )}

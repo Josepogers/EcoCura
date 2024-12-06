@@ -141,11 +141,15 @@ export function Home({ navigation }: any) {
       image: require("../../assets/taturana.webp"),
     },
   ];
-
   const handleFavoritar = (praga: any) => {
-    if (!favoritos.includes(praga.id)) {
+    if (favoritos.includes(praga.id)) {
+      // Se já estiver favoritado, remove dos favoritos
+      const novosFavoritos = favoritos.filter((id) => id !== praga.id);
+      // Atualiza o estado dos favoritos
+      setFavoritos(novosFavoritos);
+    } else {
+      // Se não estiver, adiciona aos favoritos
       setFavoritos([...favoritos, praga.id]);
-      alert(`${praga.name} foi favoritada`);
     }
   };
 
@@ -158,12 +162,14 @@ export function Home({ navigation }: any) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Pragas Agrícolas</Text>
+
       <TextInput
         style={styles.searchBar}
         placeholder="Buscar praga..."
         value={searchQuery}
         onChangeText={setSearchQuery}
       />
+
       <ScrollView style={styles.scrollView}>
         <TouchableOpacity
           style={styles.favoritosButton}
@@ -173,20 +179,27 @@ export function Home({ navigation }: any) {
         >
           <Text style={styles.favoritosButtonText}>Ver Favoritos</Text>
         </TouchableOpacity>
+
         {filteredPragas.map((praga) => (
           <View key={praga.id} style={styles.pragaContainer}>
             <Image source={praga.image} style={styles.pragaImage} />
             <View style={styles.textContainer}>
               <Text style={styles.pragaName}>{praga.name}</Text>
-              <TouchableOpacity onPress={() => handleFavoritar(praga)}>
-                <FontAwesome
-                  name={favoritos.includes(praga.id) ? "heart" : "heart-o"}
-                  size={24}
-                  color="red"
-                  style={styles.favoritoIcon}
-                />
-              </TouchableOpacity>
             </View>
+            <TouchableOpacity onPress={() => handleFavoritar(praga)}>
+              <FontAwesome
+                name={favoritos.includes(praga.id) ? "heart" : "heart-o"}
+                size={24}
+                color="red"
+                style={styles.favoritoIcon}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => navigation.navigate("PragaDetalhes", { praga })}
+              style={styles.detailsButton}
+            >
+              <Text style={styles.detailsButtonText}>Ver Detalhes</Text>
+            </TouchableOpacity>
           </View>
         ))}
       </ScrollView>
@@ -195,47 +208,79 @@ export function Home({ navigation }: any) {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#E9F5E6", padding: 10 },
+  container: {
+    flex: 1,
+    backgroundColor: "#F5F5F5",
+    padding: 10,
+  },
   title: {
-    marginTop: 20,
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: "bold",
-    color: "#2F4F2F",
     textAlign: "center",
+    marginVertical: 10,
+    color: "#333",
+  },
+  searchBar: {
+    backgroundColor: "#FFF",
+    padding: 10,
+    borderRadius: 8,
+    borderColor: "#DDD",
+    borderWidth: 1,
+    marginBottom: 10,
+  },
+  scrollView: {
+    flex: 1,
   },
   favoritosButton: {
     backgroundColor: "#4CAF50",
-    padding: 10,
+    padding: 12,
+    borderRadius: 8,
+    alignItems: "center",
     marginBottom: 20,
-    borderRadius: 5,
   },
-  favoritosButtonText: { color: "#fff", textAlign: "center", fontSize: 16 },
-  pragaItem: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginVertical: 10,
+  favoritosButtonText: {
+    color: "#FFF",
+    fontSize: 16,
+    fontWeight: "bold",
   },
-  searchBar: {
-    width: "100%",
-    height: 40,
-    borderColor: "#88b04b",
-    borderWidth: 1,
-    borderRadius: 5,
-    paddingHorizontal: 10,
-    backgroundColor: "#fff",
-    marginBottom: 10,
-  },
-  scrollView: { marginTop: 10 },
   pragaContainer: {
     flexDirection: "row",
-    alignItems: "center",
-    backgroundColor: "#fff",
-    marginBottom: 10,
-    borderRadius: 5,
+    backgroundColor: "#FFF",
+    borderRadius: 8,
+    marginVertical: 8,
     padding: 10,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 2,
   },
-  pragaImage: { width: 60, height: 60, borderRadius: 5, marginRight: 10 },
-  textContainer: { flex: 1 },
-  pragaName: { fontSize: 18, fontWeight: "bold", color: "#333" },
-  favoritoIcon: { alignSelf: "flex-end" },
+  pragaImage: {
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    marginRight: 10,
+  },
+  textContainer: {
+    flex: 1,
+  },
+  pragaName: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "#333",
+  },
+  favoritoIcon: {
+    marginLeft: 10,
+  },
+  detailsButton: {
+    marginLeft: 10,
+    backgroundColor: "#007BFF",
+    padding: 8,
+    borderRadius: 5,
+  },
+  detailsButtonText: {
+    color: "#FFF",
+    fontSize: 14,
+  },
 });
